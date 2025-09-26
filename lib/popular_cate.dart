@@ -11,8 +11,7 @@ class PopularCategories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-          const EdgeInsets.only(right: 20.0, left: 20, top: 40),
+      padding: const EdgeInsets.only(right: 20.0, left: 20, top: 40),
       child: Column(
         children: [
           const Row(
@@ -24,8 +23,7 @@ class PopularCategories extends StatelessWidget {
               ),
               Text(
                 "See All",
-                style: TextStyle(
-                    fontSize: 14, color: Color(0xFFA36C88)),
+                style: TextStyle(fontSize: 14, color: Color(0xFFA36C88)),
               ),
             ],
           ),
@@ -92,21 +90,21 @@ class PopularCategories extends StatelessWidget {
                     color: Color(0xFFB07C97),
                   ),
                 ),
-                 Text(
+                Text(
                   "Camping",
                   style: TextStyle(
                     fontSize: 16,
                     color: Color(0xFFB07C97),
                   ),
                 ),
-                 Text(
+                Text(
                   "Car",
                   style: TextStyle(
                     fontSize: 16,
                     color: Color(0xFFB07C97),
                   ),
                 ),
-                 Text(
+                Text(
                   "Food",
                   style: TextStyle(
                     fontSize: 16,
