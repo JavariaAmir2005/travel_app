@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         )),
                       ),
                       Positioned(
-                        top: 245,
+                        top: 200,
                         child: SizedBox(
                           height: 400,
                           width: MediaQuery.of(context).size.width,
@@ -102,7 +102,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             physics: const BouncingScrollPhysics(),
                             scrollDirection: Axis.horizontal,
                             itemBuilder: (context, index) {
-                              LocationDetail location = filteredLocations[index];
+                              LocationDetail location =
+                                  filteredLocations[index];
                               return GestureDetector(
                                 // For navigating to second screen.
                                 onTap: () {
@@ -174,22 +175,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: MediaQuery.of(context).size.height / 3.49,
                 width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0XFFF3ECEE),
-                        Color(0xFFFFFBFB),
-                      ]),
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                height: MediaQuery.of(context).size.height / 3.49,
-                width: MediaQuery.of(context).size.width,
-                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(70),
@@ -202,7 +187,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     if (category == "All") {
                       filteredLocations = locationItems;
                     } else {
-                      filteredLocations = locationItems.where((loc) => loc.category == category).toList();
+                      filteredLocations = locationItems
+                          .where((loc) => loc.category == category)
+                          .toList();
                     }
                   });
                 }),
@@ -273,19 +260,29 @@ class _HomeScreenState extends State<HomeScreen> {
                     selectedIndex = index;
                     switch (categoryList[index]) {
                       case "Best nature":
-                        filteredLocations = locationItems.where((loc) => loc.rating >= 5.0).toList();
+                        filteredLocations = locationItems
+                            .where((loc) => loc.rating >= 5.0)
+                            .toList();
                         break;
                       case "Most viewed":
-                        filteredLocations = locationItems.where((loc) => loc.rating >= 4.9).toList();
+                        filteredLocations = locationItems
+                            .where((loc) => loc.rating >= 4.9)
+                            .toList();
                         break;
                       case "Recommend":
-                        filteredLocations = locationItems.where((loc) => loc.rating >= 4.5).toList();
+                        filteredLocations = locationItems
+                            .where((loc) => loc.rating >= 4.5)
+                            .toList();
                         break;
                       case "Newly discover":
-                        filteredLocations = locationItems.where((loc) => loc.time <= 10).toList();
+                        filteredLocations = locationItems
+                            .where((loc) => loc.time <= 10)
+                            .toList();
                         break;
                       case "Peace":
-                        filteredLocations = locationItems.where((loc) => loc.temperature <= 20).toList();
+                        filteredLocations = locationItems
+                            .where((loc) => loc.temperature <= 20)
+                            .toList();
                         break;
                       default:
                         filteredLocations = locationItems;
